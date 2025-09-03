@@ -11,3 +11,16 @@ class Solution(object):
 nums = [2,2,1]
 sol = Solution()
 print(sol.singleNumber(nums))
+
+#same number tho xor chesthe 0 vasthadhi
+# same program with less time and space complexity using xor
+class Solution(object):
+    def singleNumber(self, nums):
+        res=0
+        for i in nums:
+            res=res^i
+        return res
+            
+nums = [4,1,2,1,2]
+sol = Solution()
+print(sol.singleNumber(nums))
