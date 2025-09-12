@@ -175,3 +175,32 @@ b = {"details2": "200,sravan,napier"}
 # Convert the dictionaries to JSON format and print them
 print(json.dumps(a, indent=4))
 print(json.dumps(b, indent=4))
+
+18)print number range
+class Solution(object):
+    def primeNumber(self, num):
+        for i in range(2,num+1):
+            c=0
+            for j in range(1,i+1):
+                if(i%j==0):
+                    c=c+1
+            if(c==2):
+                print(i)
+num = 20
+sol = Solution()
+sol.primeNumber(num)
+
+19)is prime or Not:
+class Solution(object):
+    def primeNumber(self, num):
+        c=0
+        for i in range(1,num+1):
+            if(num%i==0):
+                c=c+1
+        if(c==2):
+            return True
+        else:
+            return False
+num = 1
+sol = Solution()
+print(sol.primeNumber(num))
