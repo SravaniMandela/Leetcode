@@ -1,14 +1,14 @@
 class Solution(object):
-    def isPowerOfTwo(self, n):
+    def isPowerOfThree(self, n):
         if(n<=0):
             return False
         i=0
-        while(2**i<=n):
-            if(2**i==n):
+        while(3**i<=n):
+            if(3**i==n):
                 return True
             i=i+1
         return False
                        
 n=262143
 sol=Solution()
-print(sol.isPowerOfTwo(n))
+print(sol.isPowerOfThree(n))
