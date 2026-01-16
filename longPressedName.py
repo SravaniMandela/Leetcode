@@ -1,12 +1,14 @@
 class Solution(object):
     def isLongPressedName(self, name, typed):
-        name=list(name)
-        typed=list(typed)
-        for i in name:
-            if i in typed:
-                typed.remove(i)
-        print(typed)
-        return False
+        j=0
+        for i in range(len(typed)):
+            if(j<len(name) and typed[i]==name[j]):
+                j=j+1
+            elif(i>0 and typed[i]==typed[i-1]):
+                continue
+            else:
+                return False
+        return j==len(name)
                 
 name = "saeed"
 typed = "ssaaedd"   
